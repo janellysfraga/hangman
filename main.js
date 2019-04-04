@@ -160,3 +160,24 @@ function roundComplete() {
 
     }
 }
+
+
+//MAIN PROCESS (this is the code that controls what is actually run)
+//--------------------------------------------------------------------------------
+
+//Start game
+startGame();
+
+//Then initiate the function for capturing key clicks 
+document.onkeyup = function(event) {
+
+    //Converts all key clicks to lower case letters
+    var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
+
+    //Runs the code to check for corrections
+    checkLetters(letterGuessed);
+
+    //Runs each code after each round is done
+    roundComplete();
+    
+}
