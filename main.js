@@ -2,10 +2,10 @@
 //--------------------------------------------------------------
 
 //Array of Word options (all lowercase)
-const wordslist = ["belle", "aurora", "jasmine"];
+const wordsList = ["belle", "aurora", "jasmine"];
 
 //Solutions will be held here 
-let choseWord = "";
+let chosenWord = "";
 
 //This will break the solution into individual letters to be stored in an array. 
 var lettersInChosenWord = [];
@@ -32,16 +32,16 @@ var numGuesses = 0;
 function startGame(){
 
     //Start over the guesses at specified number
-    numGuesses = 9;
+    numGuesses = 10;
 
     //Solution is chosen randomly from wordlist
-    chosenWord = wordsList[Math.floor(Math.random() * wordslist.length)];
+    chosenWord = wordsList[Math.floor(Math.random() * wordsList.length)];
 
     // The word is broken into individual letters
     lettersInChosenWord = chosenWord.split("");
 
     //We count the number of letters in the word
-    mumBlanks = lettersInChosenWord.length;
+    numBlanks = lettersInChosenWord.length;
 
     //We print the solution in the console (for testing)
     console.log(chosenWord);
@@ -125,7 +125,7 @@ function roundComplete() {
     document.getElementById("guesses-left").innerHTML = numGuesses;
 
     // This will print the array of guesses and blanks onto the page
-    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join("  ");
+    document.getElementById("word-blanks").innerHTML = blanksAndSuccesses.join("");
 
     // This will print the wrong guesses onto the page
     document.getElementById("wrong-guesses").innerHTML = wrongGuesses.join(" ");

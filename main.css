@@ -1,0 +1,22 @@
+h1 {
+    color: purple;
+    font-style: italic;
+}
+h2 {
+    color: white;
+    font-style: italic;
+}
+
+body {
+    background-color: pink;
+}
+
+strong {
+    color: purple;
+}
+small {
+    color: purple;
+}
+h3 {
+    color: purple;
+}
